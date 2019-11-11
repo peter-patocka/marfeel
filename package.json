@@ -1,0 +1,23 @@
+{
+  "name": "marfeel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "buildDev": "webpack --mode=development --watch",
+    "startDev": "webpack-dev-server"
+  },
+  "author": "Peter Patocka",
+  "license": "MIT",
+  "dependencies": {
+    "d3": "^5.12.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "devDependencies": {
+    "d3": "^5.12.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  }
+}

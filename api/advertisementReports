@@ -1,0 +1,118 @@
+[
+    {
+        "name": "Revenue",
+        "value": 200000,
+        "valueSuffix": "&euro;",
+        "history": {
+            "data": [
+                3,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                15,
+                18,
+                16,
+                15,
+                14,
+                10
+            ],
+            "backgroundColor": "#f5faf3",
+            "lineColor": "#a3d35c"
+        },
+        "data": [
+            {
+                "name": "Tablet",
+                "percent": 60,
+                "value": 120000,
+                "color": "#a3d35c"
+            },
+            {
+                "name": "Smartphone",
+                "percent": 40,
+                "value": 80000,
+                "color": "#396522"
+            }
+        ]
+    },
+    {
+        "name": "Impresions",
+        "value": 50000,
+        "history": {
+            "data": [
+                20,
+                19,
+                15,
+                17,
+                14,
+                13,
+                12,
+                10,
+                9,
+                8,
+                7,
+                6,
+                5,
+                4,
+                1
+            ],
+            "backgroundColor": "#f5f9f9",
+            "lineColor": "#7abfe5"
+        },
+        "data": [
+            {
+                "name": "Tablet",
+                "percent": 40,
+                "value": 20000,
+                "color": "#7abfe5"
+            },
+            {
+                "name": "Smartphone",
+                "percent": 60,
+                "value": 30000,
+                "color": "#29556e"
+            }
+        ]
+    },
+    {
+        "name": "Visits",
+        "value": 600000000,
+        "history": {
+            "data": [
+                3,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                15,
+                18,
+                16,
+                15,
+                14,
+                10
+            ],
+            "backgroundColor": "#fcfaf2",
+            "lineColor": "#e3c628"
+        },
+        "data": [
+            {
+                "name": "Tablet",
+                "percent": 80,
+                "value": 480000000,
+                "color": "#e3c628"
+            },
+            {
+                "name": "Smartphone",
+                "percent": 20,
+                "value": 120000000,
+                "color": "#b95c2a"
+            }
+        ]
+    }
+]

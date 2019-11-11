@@ -1,0 +1,87 @@
+
+body {
+    font-family: Arial;
+    font-size: 14px;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+}
+.content {
+    margin: 20px;
+}
+.error {
+    border: 1px solid #f21d1d;
+    padding: 10px;
+    background-color:#fff5f5;
+    color:#f21d1d;
+}
+.reports {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    min-width: 200px;
+}
+.reports .report {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e4e4e4;
+}
+.report .overview {
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+.report .overview .reportName {
+    color: #a2a2a2;
+    font-size: 18px;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 75px;
+    width: 100%;
+    z-index: 5;
+}
+.report .overview .reportValue {
+    color: #393939;
+    font-size: 24px;
+    text-align: center;
+    position: absolute;
+    top: 95px;
+    width: 100%;
+    z-index: 5;
+}
+.report .overview .donutChart {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 4;
+}
+.report .overview .historyChart {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+}
+.report .items {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.report .items .item .name,
+.report .items .item .percent {
+    font-weight: bold;
+}
+.report .items .item:nth-child(2n) {
+    text-align: right;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .reports {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 768px) {
+    .reports {
+        grid-template-columns: 1fr;
+    }
+}
