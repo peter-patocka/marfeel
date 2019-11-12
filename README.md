@@ -15,6 +15,11 @@ To build, test and optimize project, several dependencies has been used:
 
 To run project, check that you have [NodeJS](https://nodejs.org/en/) installed.
 
+Firstly, we need to install dependendies for the node project:
+```
+npm install
+```
+
 ## Development build
 
 To watch over changes and rebuild project on change. Rebuilded project in development is not minified.
