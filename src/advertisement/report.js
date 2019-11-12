@@ -14,13 +14,7 @@ export class Report {
         return wrapper;
     }
     async showReports(wrapper) {
-        let reports = await fetch("/api/advertisementReports")
-            .then(response => response.json())
-            .then(data => data.map(item => new ReportDto(item)))
-            .catch(err => {
-                utils.error("It was not possible to get advertisement data. ", err)
-                return [];
-            })
+        let reports = await this.loadReports();
         if(reports.length == 0) {
             wrapper.appendChild(this.createEmptyComponent())
             utils.log("There are no data")
@@ -31,6 +25,15 @@ export class Report {
             reportsHtml += reportTemplate(reportData);
         });
         wrapper.insertAdjacentHTML('beforeend', reportsHtml)
+    }
+    loadReports() {
+        return fetch("/api/advertisementReports")
+            .then(response => response.json())
+            .then(data => data.map(item => new ReportDto(item)))
+            .catch(err => {
+                utils.error("It was not possible to get advertisement data. ", err)
+                return [];
+            });
     }
     createEmptyComponent() {
         document.createElement("div").insertAdjacentHTML
