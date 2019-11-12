@@ -1,4 +1,5 @@
 import { Report } from './advertisement/report';
+import "./assets/style.css";
 
 let app = {
   init : function(options) {
