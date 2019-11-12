@@ -2,9 +2,9 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-var ZipPlugin = require('zip-webpack-plugin');
 
 module.exports = {
+  devtool: 'inline-source-map',
   entry: ['@babel/polyfill', './src/index.js'],
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -36,7 +36,7 @@ module.exports = {
       }
     ]
   },
-  plugins: [ 
+  plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: "style.css"
@@ -46,9 +46,6 @@ module.exports = {
       hash: true,
       template: './src/index.html',
       filename: 'index.html'
-    }),
-    new ZipPlugin({
-      filename: 'release.zip'
     })
   ]
 };
