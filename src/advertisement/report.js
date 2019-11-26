@@ -1,7 +1,7 @@
-import { utils } from "../util/utils";
 import { translation } from "../nls/translations";
 import { reportTemplate } from "./report.template";
 import { ReportDto } from "./report.dto";
+import { createElement, error, log } from "../util/utils";
 
 export class Report {
     render() {        
@@ -10,14 +10,14 @@ export class Report {
         return wrapper;
     }
     createWrapper() {
-        let wrapper = utils.createElement("div", {className : "reports"});
+        let wrapper = createElement("div", {className : "reports"});
         return wrapper;
     }
     async showReports(wrapper) {
         let reports = await this.loadReports();
         if(reports.length == 0) {
             wrapper.appendChild(this.createEmptyComponent())
-            utils.log("There are no data")
+            log("There are no data")
             return;
         }
         let reportsHtml = "";
@@ -31,13 +31,13 @@ export class Report {
             .then(response => response.json())
             .then(data => data.map(item => new ReportDto(item)))
             .catch(err => {
-                utils.error("It was not possible to get advertisement data. ", err)
+                error("It was not possible to get advertisement data. ", err)
                 return [];
             });
     }
     createEmptyComponent() {
         document.createElement("div").insertAdjacentHTML
-        let element = utils.createElement("div", {className : "error"});
+        let element = createElement("div", {className : "error"});
         element.innerHTML = translation.EMPTY_ADVERTISEMENTS
         return element;
     }
