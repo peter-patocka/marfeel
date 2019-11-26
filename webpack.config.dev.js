@@ -11,6 +11,11 @@ module.exports = {
     filename: 'main.js'
   },
   devServer: {
+    before: function(app, server, compiler) {
+      app.get('/api/advertisementReports', function(req, res) {
+        res.json(require('./mockData/advertisementReports.json'));
+      });
+    },
     contentBase: path.resolve(__dirname),
     compress: false,
     port: 8080
