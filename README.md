@@ -2,6 +2,8 @@
 
 Client side web application displays advertisement report data in pie chart (rendered by D3JS library).
 
+![Application screenshot](/application.png)
+
 Project is bundled by **Webpack 4** and is written in **Vanilla JavaScript ES6 (No Frameworks)**.
 To build, test and optimize project, several dependencies has been used:
 * [Babel](https://babeljs.io/) - to turn ES6 code into ES5 
